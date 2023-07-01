@@ -62,7 +62,7 @@ object TypesValuesVariables extends App{
        следовательно здесь уже понадобятся двойные кавычки
      */
 
-  
+
   // s-интерполятор - используется для подставления значения переменной типа String в строку.
   val name = "John"
   println(s"Hello, $name") // выводит Hello, John,
