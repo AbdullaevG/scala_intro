@@ -1,6 +1,6 @@
 package lectures.week1basics
 
-object Recursion extends App{
+object Recursion extends App {
   var i = 0
   while (i < 3) {
     println("hello")
@@ -69,4 +69,17 @@ object Recursion extends App{
   }
 
   println(repeatWord("hello", 3))
+
+
+  def powerOfTwo(degree: Int): Long = {
+    @tailrec
+    def loop(i: Int, accumulate: Long = 1): Long = {
+      if (i <= 0) accumulate
+      else loop(i - 1, accumulate * 2)
+    }
+
+    loop(degree)
+  }
+
+  println(powerOfTwo(10))
 }
